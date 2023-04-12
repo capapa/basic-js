@@ -22,6 +22,12 @@ function dateSample(/* sampleActivity */) {
   // remove line with error and write your code here
 }
 
+// function dateSample(sampleActivity) {
+//   let res = false;
+  
+//   return res;
+// }
+
 module.exports = {
   dateSample
 };
