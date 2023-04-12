@@ -15,12 +15,15 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function createDreamTeam(members) {
   const arr = [];
+  if (!Array.isArray(members)) return false;
   for (i of members) {
     if (typeof i === 'string') {
-      arr.push(i[1].toUpperCase());
+      const c = i.trim()[0].toUpperCase();
+      if (c) arr.push(c);
     }
   }
-  return arr.sort().join('');
+  if (arr.length > 0) return arr.sort().join('');
+  return false;
 }
 
 module.exports = {
